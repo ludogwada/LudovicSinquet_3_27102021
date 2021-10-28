@@ -21,7 +21,7 @@ html {
 }
 
 *, *::before, *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 img, video {
@@ -380,4 +380,133 @@ template {
   display: none;
 }
 
-/*# sourceMappingURL=style.css.map */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+body {
+  font-family: "roboto";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+  width: 100%;
+}
+.header__logo {
+  width: 150px;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+}
+.search__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+  height: 50px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+}
+.search-form__map {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 25px;
+  width: 25px;
+}
+.search-form__map i {
+  position: absolute;
+  font-size: 14px;
+  padding-top: 20%;
+}
+.search-form__text {
+  font-size: 13px;
+  padding-left: 5%;
+  border: none;
+  background-color: #EAEAEA;
+}
+
+.search-titre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10%;
+}
+.search-titre h2 {
+  font-size: 16px;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+}
+.search-titre p {
+  font-size: 13px;
+  text-align: center;
+}
+.search-titre input {
+  margin-top: 10%;
+  height: 50px;
+  width: 180px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+  border: none;
+  background-color: #FF79DA;
+}
+
+/*# sourceMappingURL=styles.css.map */

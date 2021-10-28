@@ -15,21 +15,23 @@
 <body>
     
     <!--Header -->
-    <header>
+    <header class="header">
         
-        <div><img src="./images/logo/ohmyfood.png" alt="logo"></div>
+        <img class="header__logo" src="./images/logo/ohmyfood.png" alt="logo">
         
     </header>
     
-    <main>
+    <main class="container">
         
         <section class="search">
-            <form method="post" action="#">
-                <div>
-                    <span ><i class="fas fa-map-marker-alt"></i></span>
-                    <span><input type="search" value="Paris, Belleville"/></span>
-                    <span><h2>Réservez le menu qui vous convient</h2></span>
-                    <span><p>Découvrez des restaurants d'exceptions, sélectionnés par nos soins</p></span>
+            <div class="search__location">
+                <form class="search-form" method="post" action="#">
+                    <span class="search-form__map"><i class="fas fa-map-marker-alt"></i></span>
+                    <span><input class="search-form__text" type="search" value="Paris, Belleville"/></span>
+                </div>
+                <div class="search-titre">
+                    <h2>Réservez le menu qui vous convient</h2>
+                    <p>Découvrez des restaurants d'exceptions, sélectionnés par nos soins</p>
                     <span><input type="submit" value="Explorer nos restaurants" /></span>
                 </div>
             </form>
@@ -88,16 +90,16 @@
             </article>
         </section>
     </main>
-
+    
     <footer>
         <div>
             <h5>ohmyfood</h5>
             <ul>
                 <li><a href="#"><i class="fas fa-utensils"></i>
-                <span>Proposer un restaurant</span>
+                    <span>Proposer un restaurant</span>
                 </a></li>
                 <li><a href="#"><i class="fas fa-hands-helping"></i>
-                <span>Devenir partenaire</span>
+                    <span>Devenir partenaire</span>
                 </a></li>
                 <li><a href="#"><span>Mentions légales</span>
                 </a></li>
