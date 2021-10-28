@@ -1,7 +1,6 @@
 {
   "name": "ludovicsinquet_3_27102021",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/styles.scss:./css/style.css"
@@ -15,5 +14,6 @@
   "bugs": {
     "url": "https://github.com/ludogwada/LudovicSinquet_3_27102021/issues"
   },
-  "homepage": "https://github.com/ludogwada/LudovicSinquet_3_27102021#readme"
+  "homepage": "https://github.com/ludogwada/LudovicSinquet_3_27102021#readme",
+  "description": ""
 }
