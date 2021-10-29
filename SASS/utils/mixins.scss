@@ -1,0 +1,10 @@
+@mixin shadows {
+    box-shadow: 5px 5px 5px 2px $color-grey;
+}
+
+@mixin hover-functioning {
+    background-color: $color-primary-light;
+    color: $color-primary;
+}
+
+
