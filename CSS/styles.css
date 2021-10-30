@@ -473,6 +473,11 @@ a {
   text-decoration: none;
 }
 
+.price {
+  font-size: small;
+  font-weight: bold;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -501,179 +506,86 @@ a {
   height: 63px;
   width: 100%;
 }
+.header__icon {
+  position: absolute;
+  width: 100%;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+.header__icon a {
+  padding: 15px;
+}
+.header__icon i {
+  font-size: 20px;
+}
 .header__logo {
   width: 150px;
 }
 
-.search {
-  display: flex;
-  flex-direction: column;
-  background-color: #F6F6F6;
-}
-.search__location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #EAEAEA;
-  height: 50px;
-}
-
-.search-form {
-  display: flex;
-  align-items: center;
-  margin-left: 5%;
-}
-.search-form__map {
-  display: flex;
-  justify-content: center;
+.header__logo {
   position: relative;
-  height: 25px;
-  width: 25px;
-}
-.search-form__map i {
-  position: absolute;
-  font-size: 14px;
-  padding-top: 20%;
-}
-.search-form__text {
-  font-size: 13px;
-  padding-left: 5%;
-  border: none;
-  background-color: #EAEAEA;
 }
 
-.search-titre {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 10%;
-}
-.search-titre h1 {
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 5%;
-}
-.search-titre input {
-  margin-top: 10%;
-  height: 50px;
-  width: 180px;
-  border-radius: 20px;
-  font-size: 12px;
-  color: white;
-  border: none;
-  background-color: #FF79DA;
-  cursor: pointer;
+.main {
+  height: 1287px;
 }
 
-.functioning {
+.menu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.functioning__selection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
-}
-.functioning a {
-  width: 100%;
-}
-.functioning__list {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 50px;
+  border-radius: 40px 40px 0 0;
   background-color: #F6F6F6;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  box-shadow: 5px 5px 5px 2px #EAEAEA;
+  margin-top: -40px;
+  width: 100%;
+  position: absolute;
+  padding: 50px 20px 50px 20px;
 }
-.functioning__list:hover {
-  background-color: #f2eafb;
-  color: #9356DC;
-}
-.functioning__list__circle {
-  margin-right: auto;
-  margin-left: -10px;
-  border-radius: 25px;
-  padding-left: 8px;
-  padding-top: 5px;
-  width: 20px;
-  height: 20px;
-  background-color: #9356DC;
-  color: white;
-  font-size: 8px;
-}
-.functioning__text {
+.menu__title {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  margin-right: auto;
-  width: 180px;
+  margin-bottom: 20px;
 }
-.functioning__text__icon {
-  color: #7e7e7e;
+.menu__title h2 {
+  font-family: "shrikhand";
+  font-size: 26px;
 }
-.functioning__text__text {
-  margin-left: 20px;
+.menu__title i {
+  font-size: 32px;
+  margin-right: 20px;
 }
-
-.restaurant {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #F6F6F6;
-  padding-top: 50px;
-  padding-bottom: 50px;
+.menu__h3 {
+  width: 30px;
+  font-weight: normal;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #99E2D0;
 }
-.restaurant__title {
-  margin-right: auto;
-  padding-bottom: 20px;
-  padding-left: 10px;
-}
-.restaurant__card {
-  width: 90%;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 25px;
+.menu__card {
+  border-radius: 20px;
+  border: 1px solid #EAEAEA;
+  width: 100%;
+  height: 75px;
+  margin-bottom: 20px;
   background-color: white;
-  box-shadow: 5px 5px 5px 2px #EAEAEA;
-  margin-bottom: 20px;
+  box-shadow: 0px 0px 5px 2px #EAEAEA;
 }
-
-.card {
-  height: 170px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px 20px 0 0;
-  margin-bottom: 20px;
+.menu__card__title {
+  padding-top: 20px;
+  padding-left: 20px;
 }
-.card img {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  object-fit: cover;
+.menu__card__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 12px;
 }
-
-.text {
-  margin-left: 10px;
-}
-.text p {
-  margin-top: 5px;
-}
-.text i {
-  float: right;
-  font-size: 20px;
-  margin-right: 25px;
-  margin-top: -30px;
+.menu__card__validation {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
