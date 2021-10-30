@@ -52,15 +52,7 @@
     }
     
     input{
-        margin-top: 10%;
-        height: 50px;
-        width: 180px;
-        border-radius: 20px;
-        font-size: 12px;
-        color: $color-white;
-        border: none;
-        background-color: $color-secondary;
-        cursor: pointer;
+        @include btn
     }
 
 }

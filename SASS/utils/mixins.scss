@@ -6,5 +6,14 @@
     background-color: $color-primary-light;
     color: $color-primary;
 }
-
-
+@mixin btn {
+    margin-top: 10%;
+    height: 50px;
+    width: 180px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: $color-white;
+    border: none;
+    background-color: $color-secondary;
+    cursor: pointer;
+}
