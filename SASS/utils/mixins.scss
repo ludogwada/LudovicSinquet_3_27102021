@@ -4,7 +4,10 @@
 
 @mixin hover-functioning {
     background-color: $color-primary-light;
-    color: $color-primary;
+    .functioning__text__icon{
+        color: $color-primary;
+    }
+    
 }
 @mixin btn {
     margin-top: 10%;
@@ -30,4 +33,14 @@
     margin-bottom: 20px;
     background-color: white;
     @include shadows
+}
+@mixin new{
+    right: 12px;
+    top: 12px;
+    background-color: $color-tertiary;
+    font-weight: bold;
+    color: darken($color-tertiary, 35);
+    padding: 10px 15px ;
+    position: absolute;
+    border-radius: 3px;
 }

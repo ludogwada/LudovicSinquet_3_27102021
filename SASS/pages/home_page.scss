@@ -160,6 +160,9 @@
     position: absolute;
     object-fit:cover;
   }
+  &__new{
+      @include new;
+  }
 }
 .text{
     margin-left: 10px;
