@@ -1,10 +1,11 @@
 .footer{
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    width: 100%;
     background-color: $color-footer;
     color: white;
     padding-left: 16px;
     padding-bottom: 15px;
+    height: max-content;
     
     &__title{
         margin-top: 16px;

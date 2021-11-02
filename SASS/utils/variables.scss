@@ -7,7 +7,7 @@ $color-footer : #353535;
 $color-white : white;
 $color-icon : #7e7e7e;
 $color-primary-light: lighten($color-primary, 35);
-$color-mix : linear-gradient( to top, #9356DC, #FF79DA);
+$color-mix :radial-gradient(ellipse farthest-corner at 20px 0, #FF79DA 0%, #9356DC 100%);
 
 
 $font-title : 'shrikhand';
