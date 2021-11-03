@@ -583,7 +583,6 @@ a {
 .header__icon {
   position: absolute;
   width: 100%;
-  margin-left: 20px;
   margin-bottom: 5px;
 }
 .header__icon a {
@@ -913,7 +912,7 @@ a {
   transition: transform 330ms ease-in-out;
 }
 .menu__card__check .fa-check-circle {
-  color: #fff;
+  color: white;
   transition: transform 500ms ease-in-out;
 }
 
