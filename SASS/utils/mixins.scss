@@ -1,5 +1,9 @@
 @mixin shadows {
-    box-shadow: 0px 0px 5px 2px $color-grey;
+    box-shadow: 3px 3px 10px $color-icon;
+}
+
+@mixin dark-shadows {
+    box-shadow: 3px 3px 25px $color-icon;
 }
 
 @mixin hover-functioning {
@@ -13,12 +17,21 @@
     margin-top: 10%;
     height: 50px;
     width: 180px;
-    border-radius: 20px;
-    font-size: 12px;
+    border-radius: 50px;
+    font-size: 13px;
     color: $color-white;
     border: none;
     background-image: $color-mix;
     cursor: pointer;
+    @include shadows;
+    transform: scale(1);
+    transition: transform 500ms;
+    opacity: 1;
+    &:hover{
+        transform: scale(1.1);
+        opacity: 0.8;
+        @include dark-shadows;
+    }
 }
 @mixin title {
     font-family: $font-title;
@@ -36,19 +49,21 @@
 }
 
 @mixin heart {
-    .heart{
-        font-size: 20px;
-        color: grey;
-        &:hover{
-            animation: fill 1s ease-out;
-            background: linear-gradient($color-primary, $color-secondary);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-        }
-    
+    font-size: 20px;
+    padding: 10px;
+    color: grey;
+    &:hover{
+        animation: fill 1s ease-out;
+        background-image : linear-gradient($color-secondary, $color-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: bold;
     }
-}
+      }
+    
+    
+
 
 @mixin new{
     right: 12px;

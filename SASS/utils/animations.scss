@@ -16,3 +16,13 @@
         visibility: hidden;
     }
 }
+
+@keyframes fill {
+    0% {
+      transform: scaleY(0);
+    }
+   
+    100% {
+      transform: scaleY(1);
+    }
+  }
