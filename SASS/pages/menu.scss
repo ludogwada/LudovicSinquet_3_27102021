@@ -5,37 +5,40 @@
 }
 
 .main{
-    height:1287px;
+    &__image{
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+    }
 }
 
 .menu{
-    display: flex;
-    flex-direction: column;
-    border-radius: 40px 40px 0 0;
-    background-color: $color-grey-light;
-    margin-top: -40px;
+    background-color: #f6f6f6;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     width: 100%;
-    position: absolute; 
-    padding: 50px 20px 50px 20px;
-
+    position: relative;
+    margin-top: -50px;
+    
     
     &__title{
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        padding: 15px;
         
         h2{
-            @include title;
+            @include title
         }
         
-        i{
+        .far{
             font-size: 32px;
             margin-right: 20px;
+            @include heart
         }
-        
     }
+    
+    
     
     &__h3{
         width: 30px;
@@ -44,33 +47,54 @@
         margin-bottom: 15px;
         border-bottom: 2px solid $color-tertiary;
     }
-
+    
     &__card{
         @include card;
-
-        :hover{
-        }
-
+        
+        
+        
         &__title{
-            padding-top: 20px;
-            padding-left: 20px;
-        }
+            padding-top: 5px;
+            margin: 0;
 
+            h3{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+           }
+        }
+        
         &__description{
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top: 10px;
-            padding-bottom: 12px;
-        }
-
-        &__validation{
-            display: none;
-            }
+            align-items: center;
+            padding-top: 5px;
             
-           
+            p{
+                margin: 0;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
         
+        &__price{
+            @include price;
+        }
+        
+        &__check {
+            @include check;
+        }
     }
+}
+.entrée{
+    animation: fadein 2s ease-in-out;
+}
+
+.plat{
+    animation: fadein 4s ease-in-out;
+}
+
+.dessert{
+    animation: fadein 6s ease-in-out;
 }

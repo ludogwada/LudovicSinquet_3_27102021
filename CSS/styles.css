@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes loader {
   0% {
     background-color: #9356DC;
@@ -22,6 +23,14 @@
   }
   100% {
     transform: scaleY(1);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
@@ -542,11 +551,6 @@ a {
   text-decoration: none;
 }
 
-.price {
-  font-size: small;
-  font-weight: bold;
-}
-
 .footer {
   position: absolute;
   width: 100%;
@@ -778,8 +782,10 @@ a {
 .text p {
   margin-top: 5px;
 }
-.text__heart .far {
+.text__heart {
   font-size: 20px;
+}
+.text__heart .far {
   padding: 10px;
   color: grey;
 }
@@ -796,34 +802,43 @@ a {
   position: relative;
 }
 
-.main {
-  height: 1287px;
+.main__image {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
 }
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  border-radius: 40px 40px 0 0;
-  background-color: #F6F6F6;
-  margin-top: -40px;
+  background-color: #f6f6f6;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   width: 100%;
-  position: absolute;
-  padding: 50px 20px 50px 20px;
+  position: relative;
+  margin-top: -50px;
 }
 .menu__title {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  padding: 15px;
 }
 .menu__title h2 {
   font-family: "shrikhand";
   font-size: 26px;
 }
-.menu__title i {
+.menu__title .far {
   font-size: 32px;
   margin-right: 20px;
+  padding: 10px;
+  color: grey;
+}
+.menu__title .far:hover {
+  animation: fill 1s ease-out;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
 }
 .menu__h3 {
   width: 30px;
@@ -833,29 +848,85 @@ a {
   border-bottom: 2px solid #99E2D0;
 }
 .menu__card {
-  border-radius: 20px;
-  border: 1px solid #EAEAEA;
-  width: 100%;
-  height: 75px;
-  margin-bottom: 20px;
-  background-color: white;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
   box-shadow: 3px 3px 10px #7e7e7e;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
+}
+.menu__card:hover {
+  padding-right: 75px;
+}
+.menu__card:hover .menu__card__check {
+  opacity: 1;
+  transform: translate(-50px);
+}
+.menu__card:hover .fa-check-circle {
+  transform: rotate(360deg);
 }
 .menu__card__title {
-  padding-top: 20px;
-  padding-left: 20px;
+  padding-top: 5px;
+  margin: 0;
+}
+.menu__card__title h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__card__description {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 12px;
+  align-items: center;
+  padding-top: 5px;
 }
-.menu__card__validation {
-  display: none;
+.menu__card__description p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu__card__price {
+  font-size: small;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.menu__card__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 60px;
+  height: 60px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 20px;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
+}
+.menu__card__check .fa-check-circle {
+  color: #fff;
+  transition: transform 500ms ease-in-out;
+}
+
+.entrée {
+  animation: fadein 2s ease-in-out;
+}
+
+.plat {
+  animation: fadein 4s ease-in-out;
+}
+
+.dessert {
+  animation: fadein 6s ease-in-out;
 }
 
 /*# sourceMappingURL=styles.css.map */
