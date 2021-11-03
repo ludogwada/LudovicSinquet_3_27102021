@@ -51,13 +51,9 @@
         padding-left: 10%;
         padding-right: 10%;
         padding-bottom: 5%;
-    }
-    
-    input{
-        @include btn
-    }
-    
+    }  
 }
+
 .functioning{
     display: flex;
     flex-direction: column;
