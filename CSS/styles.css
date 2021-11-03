@@ -1,3 +1,21 @@
+@keyframes loader {
+  0% {
+    background-color: #9356DC;
+  }
+  100% {
+    background-color: #e4d5f6;
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    visibility: hidden;
+  }
+}
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -468,15 +486,16 @@ main {
   align-items: center;
   justify-content: center;
   position: fixed;
-  z-index: 1000;
+  z-index: 1;
   top: 0;
   right: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
   background: #f2eafb;
-  visibility: hidden;
-  transition: 3s;
+  opacity: 1;
+  animation: loader 2.5s;
+  animation-fill-mode: both;
 }
 .loader__spinner {
   display: flex;
@@ -506,14 +525,6 @@ main {
   animation: spin 2.5s linear infinite;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .container {
   display: flex;
   flex-direction: column;
@@ -756,9 +767,6 @@ a {
   margin-right: 25px;
   margin-top: -30px;
   background-color: white;
-}
-.text__heart:focus {
-  background-color: radial-gradient(ellipse farthest-corner at 20px 0, #FF79DA 0%, #9356DC 100%);
 }
 
 .header__logo {
