@@ -19,7 +19,7 @@
     width: 180px;
     border-radius: 50px;
     font-size: 13px;
-    color: $color-white;
+    color: white;
     border: none;
     background-image: $color-mix;
     cursor: pointer;
@@ -110,7 +110,7 @@
     opacity: 0;
     transition: transform 330ms ease-in-out;
     & .fa-check-circle {
-      color: $color-white;
+      color: white;
       transition: transform 500ms ease-in-out;
     }
 }   

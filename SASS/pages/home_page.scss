@@ -28,7 +28,7 @@
 @media screen and(min-width: 1024px) {
     .search{
         height: 280px;
-        border-right: 10px solid $color-white;
+        border-right: 10px solid white;
         }
     }
 .search-form{
@@ -112,7 +112,7 @@
             width: 20px;
             height: 20px;
             background-color: $color-primary;
-            color: $color-white;
+            color: white;
             font-size: 8px;
         }
     }
