@@ -24,7 +24,7 @@
     background-image: $color-mix;
     cursor: pointer;
     @include shadows;
-
+    
     &:hover{
         transform: scale(1.1);
         opacity: 0.8;
@@ -42,82 +42,84 @@
     margin-right: 5px;
     
 }
-
-
-@mixin heart {
-    padding: 10px;
-    color: grey;
+@mixin heart{
+    
     &:hover{
-        -webkit-animation: fill 1s ease-out;
-        animation: fill 1s ease-out;
-        background-image : linear-gradient($color-secondary, $color-primary);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+        .far{
+            -webkit-animation: scale-down-bottom 0.4s ease-in-out both;
+            animation: scale-down-bottom 0.4s ease-in-out both;
+            opacity: 0;
+        }
+        .fas{
+            -webkit-animation: scale-up-bottom 0.4s ease-in-out both;
+            animation: scale-up-bottom 0.4s ease-in-out both;
+            opacity: 1;
+        }
+    }
+}
+    
+    
+    @mixin new{
+        right: 12px;
+        top: 12px;
+        background-color: $color-tertiary;
         font-weight: bold;
+        color: darken($color-tertiary, 35);
+        padding: 10px 15px ;
+        position: absolute;
+        border-radius: 3px;
     }
-}
-
-@mixin new{
-    right: 12px;
-    top: 12px;
-    background-color: $color-tertiary;
-    font-weight: bold;
-    color: darken($color-tertiary, 35);
-    padding: 10px 15px ;
-    position: absolute;
-    border-radius: 3px;
-}
-@mixin card-restaurant{
-    -webkit-animation: apparition 0.5s;
-            animation: apparition 0.5s;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    transform: scale(0);
-}
-@mixin card{
-    background-color: #fff;
-    border-radius: 15px;
-    margin: 10px;
-    padding: 10px; 
-    @include shadows;
-    position: relative;
-    cursor: pointer;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    transition: padding-right 450ms ease-in-out;
-    &:hover {
-        padding-right: 75px;
+    @mixin card-restaurant{
+        -webkit-animation: apparition 0.5s;
+        animation: apparition 0.5s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        transform: scale(0);
     }
-    &:hover .card-restaurant__check {
-        opacity: 1;
-        transform: translate(-50px);
+    @mixin card{
+        background-color: #fff;
+        border-radius: 15px;
+        margin: 10px;
+        padding: 10px; 
+        @include shadows;
+        position: relative;
+        cursor: pointer;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        transition: padding-right 450ms ease-in-out;
+        &:hover {
+            padding-right: 75px;
+        }
+        &:hover .card-restaurant__check {
+            opacity: 1;
+            transform: translate(-50px);
+        }
+        &:hover .fa-check-circle {
+            transform: rotate(360deg) ;
+        }
     }
-    &:hover .fa-check-circle {
-        transform: rotate(360deg) ;
-    }
-}
-
-@mixin check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-tertiary;
-    width: 60px;
-    height: 60px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    position: absolute;
-    padding: 20px;
-    right: -50px;
-    top: 0;
-    opacity: 0;
-    transition: transform 330ms ease-in-out;
-    & .fa-check-circle {
-        color: white;
-        transition: transform 500ms ease-in-out;
-    }
-}   
+    
+    @mixin check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-tertiary;
+        width: 60px;
+        height: 60px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        position: absolute;
+        padding: 20px;
+        right: -50px;
+        top: 0;
+        opacity: 0;
+        transition: transform 330ms ease-in-out;
+        & .fa-check-circle {
+            color: white;
+            transition: transform 500ms ease-in-out;
+        }
+    }   
+    

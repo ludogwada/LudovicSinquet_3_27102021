@@ -34,20 +34,24 @@
     visibility: hidden;
   }
 }
-@-webkit-keyframes fill {
+@-webkit-keyframes scale-up-bottom {
   0% {
-    transform: scaleY(0);
+    transform: scale(0);
+    transform-origin: 100% 50%;
   }
   100% {
-    transform: scaleY(1);
+    transform: scale(1);
+    transform-origin: 100% 100%;
   }
 }
-@keyframes fill {
+@keyframes scale-up-bottom {
   0% {
-    transform: scaleY(0);
+    transform: scale(0);
+    transform-origin: 50% 50%;
   }
   100% {
-    transform: scaleY(1);
+    transform: scale(1);
+    transform-origin: 50% 100%;
   }
 }
 @-webkit-keyframes apparition {
@@ -981,20 +985,34 @@ a {
   margin-top: 5px;
 }
 .text__heart {
-  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 25px;
+}
+.text__heart:hover .far {
+  -webkit-animation: scale-down-bottom 0.4s ease-in-out both;
+  animation: scale-down-bottom 0.4s ease-in-out both;
+  opacity: 0;
+}
+.text__heart:hover .fas {
+  -webkit-animation: scale-up-bottom 0.4s ease-in-out both;
+  animation: scale-up-bottom 0.4s ease-in-out both;
+  opacity: 1;
 }
 .text__heart .far {
-  padding: 10px;
+  position: absolute;
   color: grey;
 }
-.text__heart .far:hover {
-  -webkit-animation: fill 1s ease-out;
-  animation: fill 1s ease-out;
+.text__heart .fas {
+  position: absolute;
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
+  opacity: 0;
 }
 
 .header__logo {
@@ -1026,20 +1044,40 @@ a {
   font-family: "shrikhand";
   font-size: 26px;
 }
+.menu__title__heart {
+  display: flex;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+}
+.menu__title__heart:hover .far {
+  -webkit-animation: scale-down-bottom 0.4s ease-in-out both;
+  animation: scale-down-bottom 0.4s ease-in-out both;
+  opacity: 0;
+}
+.menu__title__heart:hover .fas {
+  -webkit-animation: scale-up-bottom 0.4s ease-in-out both;
+  animation: scale-up-bottom 0.4s ease-in-out both;
+  opacity: 1;
+}
 .menu__title .far {
+  position: absolute;
   font-size: 32px;
   margin-right: 20px;
-  padding: 10px;
+  padding: 15px;
   color: grey;
 }
-.menu__title .far:hover {
-  -webkit-animation: fill 1s ease-out;
-  animation: fill 1s ease-out;
+.menu__title .fas {
+  position: absolute;
+  font-size: 34px;
+  margin-right: 20px;
+  padding: 15px;
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
+  opacity: 0;
 }
 .menu__h3 {
   width: 30px;
@@ -1056,17 +1094,9 @@ a {
 .menu__starter {
   padding-top: 20px;
   padding-bottom: 25px;
-  -webkit-animation: fadein 2s ease-in-out;
-  animation: fadein 2s ease-in-out;
 }
 .menu__main-course {
   padding-bottom: 25px;
-  -webkit-animation: fadein 4s ease-in-out;
-  animation: fadein 4s ease-in-out;
-}
-.menu__dessert {
-  -webkit-animation: fadein 6s ease-in-out;
-  animation: fadein 6s ease-in-out;
 }
 
 .card-restaurant {

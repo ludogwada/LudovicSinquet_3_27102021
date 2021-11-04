@@ -252,12 +252,26 @@
     p{
         margin-top: 5px;
     }
-    &__heart{
-        font-size: 20px;
-        .far{
-            @include heart;
-        }
+    &__heart{display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        font-size: 25px;
+        @include heart;
         
+        .far{
+            position: absolute;
+            color: grey;
+        }
+        .fas{
+            position: absolute;
+            background-image : linear-gradient($color-secondary, $color-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+            opacity: 0;
+        }
     }
     
 }
