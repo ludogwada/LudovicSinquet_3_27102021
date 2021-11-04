@@ -4,7 +4,9 @@
     background-color: $color-footer;
     color: white;
     padding-left: 16px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     
     &__title{

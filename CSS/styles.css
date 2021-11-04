@@ -1,9 +1,27 @@
+@-webkit-keyframes loader {
+  0% {
+    background-color: #9356DC;
+  }
+  100% {
+    background-color: #e4d5f6;
+    visibility: hidden;
+  }
+}
 @keyframes loader {
   0% {
     background-color: #9356DC;
   }
   100% {
     background-color: #e4d5f6;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
     visibility: hidden;
   }
 }
@@ -16,6 +34,14 @@
     visibility: hidden;
   }
 }
+@-webkit-keyframes fill {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 @keyframes fill {
   0% {
     transform: scaleY(0);
@@ -24,14 +50,77 @@
     transform: scaleY(1);
   }
 }
-@keyframes fadein {
-  from {
-    opacity: 0;
+@-webkit-keyframes apparition {
+  0% {
+    transform: scale(0);
+    opacity: 0%;
   }
-  to {
-    opacity: 1;
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 100%;
   }
 }
+@keyframes apparition {
+  0% {
+    transform: translateY(15px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+.delay1 {
+  -webkit-animation: apparition 0.5s;
+  animation: apparition 0.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transform: scale(0);
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.delay2 {
+  -webkit-animation: apparition 0.5s;
+  animation: apparition 0.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transform: scale(0);
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.delay3 {
+  -webkit-animation: apparition 0.5s;
+  animation: apparition 0.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transform: scale(0);
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.delay4 {
+  -webkit-animation: apparition 0.5s;
+  animation: apparition 0.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transform: scale(0);
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -158,6 +247,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */
 }
@@ -497,7 +587,7 @@ main {
   font-family: "roboto";
 }
 
-.search-titre input {
+.search__title input {
   margin-top: 10%;
   height: 50px;
   width: 180px;
@@ -508,11 +598,8 @@ main {
   background-image: radial-gradient(ellipse farthest-corner at 20px 0, #FF79DA 0%, #9356DC 100%);
   cursor: pointer;
   box-shadow: 3px 3px 10px #7e7e7e;
-  transform: scale(1);
-  transition: transform 500ms;
-  opacity: 1;
 }
-.search-titre input:hover {
+.search__title input:hover {
   transform: scale(1.1);
   opacity: 0.8;
   box-shadow: 3px 3px 25px #7e7e7e;
@@ -536,9 +623,6 @@ main {
   background-image: radial-gradient(ellipse farthest-corner at 20px 0, #FF79DA 0%, #9356DC 100%);
   cursor: pointer;
   box-shadow: 3px 3px 10px #7e7e7e;
-  transform: scale(1);
-  transition: transform 500ms;
-  opacity: 1;
 }
 .btn-commander input:hover {
   transform: scale(1.1);
@@ -558,7 +642,9 @@ main {
   width: 100%;
   height: 100%;
   opacity: 1;
+  -webkit-animation: loader 2.5s;
   animation: loader 2.5s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 .loader__spinner {
@@ -586,6 +672,7 @@ main {
   border-radius: 30px;
   border-top-color: #9356DC;
   border-bottom-color: #FF79DA;
+  -webkit-animation: spin 2.5s linear infinite;
   animation: spin 2.5s linear infinite;
 }
 
@@ -605,7 +692,9 @@ a {
   background-color: #353535;
   color: white;
   padding-left: 16px;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
 }
 .footer__title {
@@ -679,50 +768,51 @@ a {
   background-color: #EAEAEA;
   height: 50px;
 }
-
-@media screen and (min-width: 1024px) {
-  .search {
-    height: 280px;
-    border-right: 10px solid white;
-  }
-}
-.search-form {
+.search__form {
   display: flex;
   align-items: center;
   margin-left: 5%;
 }
-.search-form__map {
+.search__form__map {
   display: flex;
   justify-content: center;
   position: relative;
   height: 25px;
   width: 25px;
 }
-.search-form__map i {
+.search__form__map i {
   position: absolute;
   font-size: 14px;
   padding-top: 20%;
 }
-.search-form__text {
+.search__form__text {
   font-size: 13px;
   padding-left: 5%;
   border: none;
   background-color: #EAEAEA;
 }
-
-.search-titre {
+.search__title {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 10%;
 }
-.search-titre h1 {
+.search__title h1 {
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 5%;
 }
 
+@media screen and (min-width: 1024px) {
+  .search {
+    height: 280px;
+    border-right: 10px solid white;
+  }
+  .search__title {
+    margin: 50px;
+  }
+}
 .functioning {
   display: flex;
   flex-direction: column;
@@ -800,6 +890,7 @@ a {
   }
   .functioning__selection {
     flex-direction: column;
+    margin: 0;
   }
   .functioning h2 {
     height: 50px;
@@ -833,6 +924,13 @@ a {
 }
 
 @media screen and (min-width: 750px) {
+  .restaurant {
+    padding-top: 30px;
+  }
+  .restaurant__title {
+    text-align: center;
+    height: 50px;
+  }
   .restaurant__selection__1 {
     display: flex;
     flex-direction: row;
@@ -860,6 +958,7 @@ a {
   height: 100%;
   width: 100%;
   position: absolute;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .card__new {
@@ -889,6 +988,7 @@ a {
   color: grey;
 }
 .text__heart .far:hover {
+  -webkit-animation: fill 1s ease-out;
   animation: fill 1s ease-out;
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
@@ -902,6 +1002,7 @@ a {
 }
 
 .main img {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   height: 280px;
@@ -932,6 +1033,7 @@ a {
   color: grey;
 }
 .menu__title .far:hover {
+  -webkit-animation: fill 1s ease-out;
   animation: fill 1s ease-out;
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
@@ -954,16 +1056,20 @@ a {
 .menu__starter {
   padding-top: 20px;
   padding-bottom: 25px;
+  -webkit-animation: fadein 2s ease-in-out;
   animation: fadein 2s ease-in-out;
 }
 .menu__main-course {
   padding-bottom: 25px;
+  -webkit-animation: fadein 4s ease-in-out;
   animation: fadein 4s ease-in-out;
 }
 .menu__dessert {
+  -webkit-animation: fadein 6s ease-in-out;
   animation: fadein 6s ease-in-out;
 }
-.menu__card {
+
+.card-restaurant {
   background-color: #fff;
   border-radius: 15px;
   margin: 10px;
@@ -976,43 +1082,43 @@ a {
   overflow: hidden;
   transition: padding-right 450ms ease-in-out;
 }
-.menu__card:hover {
+.card-restaurant:hover {
   padding-right: 75px;
 }
-.menu__card:hover .menu__card__check {
+.card-restaurant:hover .card-restaurant__check {
   opacity: 1;
   transform: translate(-50px);
 }
-.menu__card:hover .fa-check-circle {
+.card-restaurant:hover .fa-check-circle {
   transform: rotate(360deg);
 }
-.menu__card__title {
+.card-restaurant__title {
   padding-top: 5px;
   margin: 0;
 }
-.menu__card__title h3 {
+.card-restaurant__title h3 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu__card__description {
+.card-restaurant__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 5px;
 }
-.menu__card__description p {
+.card-restaurant__description p {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu__card__price {
+.card-restaurant__price {
   font-size: small;
   font-weight: bold;
   margin-right: 5px;
 }
-.menu__card__check {
+.card-restaurant__check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1028,7 +1134,7 @@ a {
   opacity: 0;
   transition: transform 330ms ease-in-out;
 }
-.menu__card__check .fa-check-circle {
+.card-restaurant__check .fa-check-circle {
   color: white;
   transition: transform 500ms ease-in-out;
 }
