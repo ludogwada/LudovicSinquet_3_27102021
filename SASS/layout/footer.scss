@@ -22,4 +22,16 @@
         }
     }
 }
+@media screen and (min-width: 750px) {
+    .footer{
+        &__title{
+            display: flex;
+            justify-content: center;
+        }
 
+        ul{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}

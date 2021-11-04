@@ -44,6 +44,7 @@
         width: 30px;
         font-weight: normal;
         padding-bottom: 5px;
+        margin-left: 10px;
         margin-bottom: 15px;
         border-bottom: 2px solid $color-tertiary;
     }
@@ -88,10 +89,13 @@
     }
 }
 .entrée{
+    padding-top: 20px;
+    padding-bottom: 25px;
     animation: fadein 2s ease-in-out;
 }
 
 .plat{
+    padding-bottom: 25px;
     animation: fadein 4s ease-in-out;
 }
 
