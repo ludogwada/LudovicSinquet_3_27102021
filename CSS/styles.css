@@ -992,8 +992,6 @@ a {
   font-size: 25px;
 }
 .text__heart:hover .far {
-  -webkit-animation: scale-down-bottom 0.4s ease-in-out both;
-  animation: scale-down-bottom 0.4s ease-in-out both;
   opacity: 0;
 }
 .text__heart:hover .fas {
@@ -1051,8 +1049,6 @@ a {
   height: 55px;
 }
 .menu__title__heart:hover .far {
-  -webkit-animation: scale-down-bottom 0.4s ease-in-out both;
-  animation: scale-down-bottom 0.4s ease-in-out both;
   opacity: 0;
 }
 .menu__title__heart:hover .fas {

@@ -46,8 +46,6 @@
     
     &:hover{
         .far{
-            -webkit-animation: scale-down-bottom 0.4s ease-in-out both;
-            animation: scale-down-bottom 0.4s ease-in-out both;
             opacity: 0;
         }
         .fas{
