@@ -19,7 +19,10 @@
         }
     }
     
-    &__logo{
+    &__title{
         width: 150px;
+        font-family: $font-title;
+        font-size: 26px;
+        text-align: center;
     }
 }

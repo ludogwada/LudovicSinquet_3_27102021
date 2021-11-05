@@ -558,8 +558,7 @@ h1 {
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 26px;
 }
 
 h3 {
@@ -742,8 +741,11 @@ a {
 .header__icon i {
   font-size: 20px;
 }
-.header__logo {
+.header__title {
   width: 150px;
+  font-family: "shrikhand";
+  font-size: 26px;
+  text-align: center;
 }
 
 .explain {
@@ -945,9 +947,11 @@ a {
     flex-direction: row;
     justify-content: space-around;
   }
-  .restaurant__selection__card {
-    min-width: 250px;
+  .restaurant__selection a {
     width: 40%;
+  }
+  .restaurant__selection__card {
+    min-width: 300px;
     margin-bottom: 50px;
   }
 }
@@ -992,7 +996,7 @@ a {
   font-size: 25px;
 }
 .text__heart:hover .far {
-  opacity: 0;
+  opacity: 0.3;
 }
 .text__heart:hover .fas {
   -webkit-animation: scale-up-bottom 0.4s ease-in-out both;
@@ -1049,7 +1053,7 @@ a {
   height: 55px;
 }
 .menu__title__heart:hover .far {
-  opacity: 0;
+  opacity: 0.3;
 }
 .menu__title__heart:hover .fas {
   -webkit-animation: scale-up-bottom 0.4s ease-in-out both;
