@@ -37,8 +37,8 @@
             border-radius: 30px;
             border-top-color: $color-primary;
             border-bottom-color: $color-secondary;
-            -webkit-animation: spin 2.5s linear infinite;
-            animation: spin 2.5s linear infinite;
+            -webkit-animation: spin 2.5s ease-in-out ;
+            animation: spin 2.5s ease-in-out ;
             
             
         }

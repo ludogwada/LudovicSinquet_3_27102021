@@ -676,8 +676,8 @@ main {
   border-radius: 30px;
   border-top-color: #9356DC;
   border-bottom-color: #FF79DA;
-  -webkit-animation: spin 2.5s linear infinite;
-  animation: spin 2.5s linear infinite;
+  -webkit-animation: spin 2.5s ease-in-out;
+  animation: spin 2.5s ease-in-out;
 }
 
 .container {
