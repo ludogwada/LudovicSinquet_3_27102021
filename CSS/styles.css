@@ -1086,6 +1086,13 @@ a {
 .menu__list {
   display: flex;
   flex-direction: column;
+  -webkit-animation: apparition 0.5s;
+  animation: apparition 0.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transform: scale(0);
 }
 .menu__starter {
   padding-top: 20px;

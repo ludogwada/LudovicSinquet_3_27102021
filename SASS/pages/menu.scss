@@ -75,6 +75,7 @@
     &__list{
         display: flex;
         flex-direction: column;
+        @include card-restaurant;
     }
     
     &__starter{

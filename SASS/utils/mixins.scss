@@ -55,7 +55,7 @@
         }
     }
 }
-    
+
     
     @mixin new{
         right: 12px;
@@ -67,6 +67,7 @@
         position: absolute;
         border-radius: 3px;
     }
+
     @mixin card-restaurant{
         -webkit-animation: apparition 0.5s;
         animation: apparition 0.5s;
@@ -76,6 +77,7 @@
         animation-fill-mode: both;
         transform: scale(0);
     }
+
     @mixin card{
         background-color: #fff;
         border-radius: 15px;
