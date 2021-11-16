@@ -956,19 +956,28 @@ a {
   float: right;
   height: 50px;
   width: 50px;
-  text-align: center;
-  margin-top: -90px;
+  margin-bottom: 0;
+  margin-top: -50px;
   margin-right: 20px;
-  padding: 40px;
   font-size: 25px;
 }
-.text__heart:hover .far {
+.text__heart:active .far {
   opacity: 0.3;
 }
-.text__heart:hover .fas {
+.text__heart:active .fas {
   -webkit-animation: scale-up-bottom 0.4s ease-in-out both;
   animation: scale-up-bottom 0.4s ease-in-out both;
   opacity: 1;
+}
+@media screen and (min-width: 1024px) {
+  .text__heart:hover .far {
+    opacity: 0.3;
+  }
+  .text__heart:hover .fas {
+    -webkit-animation: scale-up-bottom 0.4s ease-in-out both;
+    animation: scale-up-bottom 0.4s ease-in-out both;
+    opacity: 1;
+  }
 }
 .text__heart .far {
   position: absolute;
@@ -1019,13 +1028,23 @@ a {
   width: 55px;
   height: 55px;
 }
-.menu__title__heart:hover .far {
+.menu__title__heart:active .far {
   opacity: 0.3;
 }
-.menu__title__heart:hover .fas {
+.menu__title__heart:active .fas {
   -webkit-animation: scale-up-bottom 0.4s ease-in-out both;
   animation: scale-up-bottom 0.4s ease-in-out both;
   opacity: 1;
+}
+@media screen and (min-width: 1024px) {
+  .menu__title__heart:hover .far {
+    opacity: 0.3;
+  }
+  .menu__title__heart:hover .fas {
+    -webkit-animation: scale-up-bottom 0.4s ease-in-out both;
+    animation: scale-up-bottom 0.4s ease-in-out both;
+    opacity: 1;
+  }
 }
 .menu__title .far {
   position: absolute;
