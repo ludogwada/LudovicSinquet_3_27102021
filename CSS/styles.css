@@ -944,6 +944,7 @@ a {
 
 .text {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 20px 15px 20px 15px;
 }
@@ -951,10 +952,14 @@ a {
   margin-top: 5px;
 }
 .text__heart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  float: right;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  margin-top: -90px;
   margin-right: 20px;
+  padding: 40px;
   font-size: 25px;
 }
 .text__heart:hover .far {
